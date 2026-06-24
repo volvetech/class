@@ -3,10 +3,11 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-image: url('https://media.giphy.com/media/3o7TKR2bA4h2w6aT3q/giphy.gif');
+    color: white;
+    background-image: url('https://media1.tenor.com/m/pT_eK7L76OEAAAAd/coding-computer-coding.gif');
     background-size: cover;
     background-position: center;
-    color: white;
+    background-attachment: fixed;
 }
 
 .game-board {
@@ -20,13 +21,15 @@ body {
 .cell {
     width: 100px;
     height: 100px;
-    background-color: #eee;
-    border: 1px solid #ccc;
+    background-color: rgba(0, 0, 0, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.4);
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: 2em;
     cursor: pointer;
+    color: white;
+    backdrop-filter: blur(2px);
 }
 
 .cell.x::before {
@@ -48,12 +51,13 @@ body {
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: rgba(0, 0, 0, .7);
+    background-color: rgba(0, 0, 0, .8);
     flex-direction: column;
     justify-content: center;
     align-items: center;
     color: white;
     font-size: 2rem;
+    backdrop-filter: blur(10px);
 }
 
 .winning-message.show {
