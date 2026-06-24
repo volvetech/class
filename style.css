@@ -1,0 +1,87 @@
+body {
+    font-family: sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image: url('https://media.giphy.com/media/3o7TKR2bA4h2w6aT3q/giphy.gif');
+    background-size: cover;
+    background-position: center;
+    color: white;
+}
+
+.game-board {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-template-rows: repeat(3, 100px);
+    gap: 5px;
+    margin-bottom: 20px;
+}
+
+.cell {
+    width: 100px;
+    height: 100px;
+    background-color: #eee;
+    border: 1px solid #ccc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2em;
+    cursor: pointer;
+}
+
+.cell.x::before {
+    content: 'X';
+}
+
+.cell.o::before {
+    content: 'O';
+}
+
+.game-status {
+    text-align: center;
+}
+
+.winning-message {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, .7);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 2rem;
+}
+
+.winning-message.show {
+    display: flex;
+}
+
+.winning-message-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.winning-message-content p {
+    font-size: 3rem;
+    margin: 0.5em;
+}
+
+.winning-message-content button {
+    font-size: 1.5rem;
+    background-color: white;
+    border: 1px solid black;
+    padding: .5em 1em;
+    cursor: pointer;
+    margin: 0.25em;
+}
+
+.winning-message-content button:hover {
+    background-color: black;
+    color: white;
+    border-color: white;
+}
