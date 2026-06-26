@@ -276,6 +276,7 @@ export default function Home() {
 
       <footer className="text-center mt-12 text-muted text-sm">
         <p>Powered by Agnes AI | Virtual Try-On V1.0</p>
+        <p className="mt-2 text-xs">© 2026 Virtual Try-On Tool</p>
       </footer>
     </div>
   )
